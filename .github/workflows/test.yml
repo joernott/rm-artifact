@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 name: Test Workflow with our Action and Upload Artifact v4 (does not work)
 
 on:
@@ -59,59 +58,3 @@ jobs:
         with:
           name: hello-*
           useGlob: true
-=======
-name: Test Workflow with our Action and Upload Artifact v4 (does not work)
-
-on:
-  workflow_dispatch:
-  push:
-jobs:
-  delete-single-file:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Create files
-        shell: bash
-        run: |
-         echo "Hello world!" >helloworld.txt
-
-      - name: Store artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: 'hello'
-          path: 'helloworld.txt'
-          retention-days: 1
-
-      - name: 'Delete artifact'
-        uses: ./
-        with:
-          name: hello
-          useGlob: false
-
-  delete-multiple-files:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Create files
-        shell: bash
-        run: |
-         echo "Hello world!" >helloworld.txt
-
-      - name: Store artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: 'hello-1'
-          path: 'helloworld.txt'
-          retention-days: 1
-
-      - name: Store artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: 'hello-2'
-          path: 'helloworld.txt'
-          retention-days: 1
-
-      - name: 'Delete artifact'
-        uses: ./
-        with:
-          name: hello-*
-          useGlob: true
->>>>>>> main
