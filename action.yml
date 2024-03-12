@@ -1,0 +1,25 @@
+name: "Delete artifacts created with v4"
+description: "Delete artifact(s) uploaded in the workflow by the upload-artifact action"
+author: "Jörn Ott"
+inputs:
+  name:
+    description: "Artifact name"
+    required: true
+  token:
+    description: GitHub token with read and write access to actions for the repository.
+    required: true
+    default: ${{ github.token }}
+  useGlob:
+    description: Should the name, or names, be treated as glob patterns.
+    required: false
+    default: "true"
+  failOnError:
+    description: Should the action fail upon encountering an error.
+    required: false
+    default: "true"
+runs:
+  using: "node20"
+  main: "dist/index.js"
+branding:
+  icon: "trash-2"
+  color: "blue"
