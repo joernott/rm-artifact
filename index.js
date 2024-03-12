@@ -24,8 +24,8 @@ async function run() {
       }
     } else {
       try {
-        const artifactResponse = await artifact.listArtifacts();
-        artifactResponse.artifacts.forEach(function(artifact) {
+        const {artifacts} = await artifactClient.listArtifacts();
+        artifacts.forEach(function(artifact) {
           if (minimatch(artifact.name, name)) {
             try {
               const {id} = artifactClient.deleteArtifact(artifact.name);
