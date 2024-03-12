@@ -7,6 +7,9 @@ jobs:
   delete-single-file:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout the action
+        uses: actions/checkout@v4
+
       - name: Create files
         shell: bash
         run: |
