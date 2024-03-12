@@ -14,7 +14,6 @@ async function run() {
     if (!useGlob) {
       try {
         const {id} = await artifactClient.deleteArtifact(name);
-        core.info(`Deleted artifact ${name} (${id})`)
       } catch (err) {
         core.error(`Could not delete artifact ${name}.`);
         core.error(err);
@@ -29,7 +28,6 @@ async function run() {
           if (minimatch(artifact.name, name)) {
             try {
               const {id} = artifactClient.deleteArtifact(artifact.name);
-              core.info(`Deleted artifact ${artifact.name} (${id})`)
             } catch (err) {
               core.error(`Could not delete artifact ${artifact.name}.`);
               core.error(err);
