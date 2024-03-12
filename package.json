@@ -1,0 +1,32 @@
+{
+    "name": "rm-artifact-action",
+    "version": "0.1.0",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "ncc build index.js --license licenses.txt"
+    },
+    "keywords": [
+        "artifact",
+        "actions",
+        "delete",
+        "rm"
+    ],
+    "author": "Jörn Ott",
+    "license": "BSD-3-Clause",
+    "engines": {
+        "node": ">=20.0.0",
+        "npm": ">=9.0.0"
+    },
+    "devDependencies": {
+        "@vercel/ncc": "^0.38.1",
+        "prettier": "^3.1.1"
+    },
+    "dependencies": {
+        "@actions/artifact": "^2.1.1",
+        "@actions/core": "^1.10.1",
+        "@actions/github": "^6.0.0",
+        "minimatch": "^9.0.3"
+    },
+    "description": "Delete an artifact uploaded in the workflow by the upload-artifact action"
+}
