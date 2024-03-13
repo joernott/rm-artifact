@@ -12,11 +12,11 @@ inputs:
   useGlob:
     description: Should the name, or names, be treated as glob patterns.
     required: false
-    default: "true"
+    default: false
   failOnError:
     description: Should the action fail upon encountering an error.
     required: false
-    default: "true"
+    default: true
 runs:
   using: "node20"
   main: "index.js"
