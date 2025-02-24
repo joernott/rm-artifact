@@ -23,7 +23,7 @@
         "prettier": "^3.5.1"
     },
     "dependencies": {
-        "@actions/artifact": "^2.2.1",
+        "@actions/artifact": "^2.2.2",
         "@actions/core": "^1.11.1",
         "@actions/github": "^6.0.0",
         "minimatch": "^10.0.1"
