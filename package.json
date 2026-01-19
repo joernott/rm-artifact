@@ -20,7 +20,7 @@
     },
     "devDependencies": {
         "@vercel/ncc": "^0.38.4",
-        "prettier": "^3.7.4"
+        "prettier": "^3.8.0"
     },
     "dependencies": {
         "@actions/artifact": "^5.0.2",
