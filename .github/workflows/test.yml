@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout the action
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Create files
         shell: bash
@@ -16,7 +16,7 @@ jobs:
          echo "Hello world!" >helloworld.txt
 
       - name: Store artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: 'hello'
           path: 'helloworld.txt'
@@ -32,7 +32,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout the action
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Create files
         shell: bash
@@ -40,14 +40,14 @@ jobs:
          echo "Hello world!" >helloworld.txt
 
       - name: Store artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: 'hello-1'
           path: 'helloworld.txt'
           retention-days: 1
 
       - name: Store artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: 'hello-2'
           path: 'helloworld.txt'
