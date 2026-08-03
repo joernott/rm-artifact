@@ -26,7 +26,7 @@
         "@actions/artifact": "^6.2.1",
         "@actions/core": "^3.0.1",
         "@actions/github": "^9.1.1",
-        "minimatch": "^10.2.5"
+        "minimatch": "^10.2.6"
     },
     "description": "Delete an artifact uploaded in the workflow by the upload-artifact action"
 }
